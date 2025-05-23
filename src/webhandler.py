@@ -4,7 +4,7 @@ from selenium.webdriver.remote.client_config import ClientConfig
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from constants import BASE_PATH, SERVICE_PORT, DEFAULT_TIMEOUT
+from src.constants import BASE_PATH, SERVICE_PORT, DEFAULT_TIMEOUT
 
 class WebHandler:
 	''' Class to handle web interactions using Selenium. '''
