@@ -3,7 +3,7 @@ import os
 import pytest
 from selenium.webdriver.common.by import By
 from src.webhandler import WebHandler
-from constants import BASE_PATH, SERVICE_PORT
+from src.constants import BASE_PATH, SERVICE_PORT
 
 @pytest.fixture
 def web_handler():
