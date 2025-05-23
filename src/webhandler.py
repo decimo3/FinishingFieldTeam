@@ -1,5 +1,4 @@
 import os
-from urllib.parse import ParseResult as URL
 from selenium.webdriver.remote.webdriver import WebDriver as Remote
 from selenium.webdriver.remote.client_config import ClientConfig
 from selenium.webdriver.common.by import By
@@ -42,7 +41,7 @@ class WebHandler:
 			self.service.stop()
 			self.service = None
 
-	def navigate_to_url(self, url: URL):
+	def navigate_to_url(self, url: str):
 		if self.driver:
 			self.driver.get(url)
 		else:
