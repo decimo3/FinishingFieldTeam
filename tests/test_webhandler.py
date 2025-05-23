@@ -18,12 +18,12 @@ def test_web_handler_initialization(web_handler):
 	assert web_handler.service_url == f"http://localhost:{SERVICE_PORT}"
 
 def test_navigate_to_url(web_handler):
-	test_url = "http://example.com"
+	test_url = "https://example.com/"
 	web_handler.navigate_to_url(test_url)
 	assert web_handler.driver.current_url == test_url
 
 def test_find_element(web_handler):
-	test_url = "http://example.com"
+	test_url = "https://example.com/"
 	web_handler.navigate_to_url(test_url)
 	element = web_handler.find_element(By.TAG_NAME, "h1")
 	assert element is not None
