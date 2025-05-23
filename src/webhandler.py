@@ -18,9 +18,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
+from webdriver_manager.chrome import ChromeDriverManager
 from src.constants import (
 	SERVICE_PORT, DEFAULT_TIMEOUT, DEFAULT_WINDOW_SIZE,
-	CHROME_DATA_DIR, CHROME_DRIVER_DIR
+	CHROME_DATA_DIR
 )
 
 class WebHandlerError(Exception):
@@ -91,8 +92,8 @@ class WebHandler:
 			self.options.add_argument("--no-sandbox")
 			self.options.add_argument("--disable-dev-shm-usage")
 
-			# Set up the Service
-			self.service = Service(executable_path=CHROME_DRIVER_DIR)
+			# Set up the Service with ChromeDriverManager
+			self.service = Service(ChromeDriverManager().install())
 
 			# Set up the WebDriver
 			self.driver = WebDriver(
