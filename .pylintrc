@@ -1,1 +1,16 @@
-indent-spaces=\t
+[MASTER]
+indent-string='    '
+
+[FORMAT]
+max-line-length=100
+indent-after-paren=4
+indent-string='    '
+
+[MESSAGES CONTROL]
+disable=C0111,C0103,C0303,W0311,W0703,R0903,R0913,R0914
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,id
+
+[TYPECHECK]
+ignored-classes=numpy,tensorflow,torch,cv2
