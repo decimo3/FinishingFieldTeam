@@ -1,7 +1,3 @@
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../..'))
-
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -11,22 +7,22 @@ sys.path.insert(0, os.path.abspath('../..'))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'FinishingFieldTeam'
-copyright = '2024, FinishingFieldTeam'
-author = 'FinishingFieldTeam'
-release = '1.0'
+copyright = '2025, Your Name'
+author = 'Your Name'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'sphinx.ext.githubpages',
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
+
+language = 'en'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -34,6 +30,6 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# -- Extension configuration -------------------------------------------------
-autodoc_member_order = 'bysource'
-add_module_names = False
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../src'))

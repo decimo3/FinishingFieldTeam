@@ -38,3 +38,32 @@ chromedriver-win64/
 # Environment variables
 .env
 .env.local
+
+# Additional Python ignores
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# WebDriver specific
+geckodriver*
+chromedriver*
+msedgedriver*
+*.exe
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development settings
+local_settings.py
+db.sqlite3
+db.sqlite3-journal

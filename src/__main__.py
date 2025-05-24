@@ -1,11 +1,15 @@
-import os
-from src.webhandler import WebHandler
-from selenium.webdriver.common.by import By
+from src.solvelib import provider
+from src import webhandler
 
 if __name__ == "__main__":
-	# Example usage
-	web_handler = WebHandler()
-	web_handler.navigate_to_url("http://example.com")
-	element = web_handler.find_element(By.TAG_NAME, "h1")
-	print(element.text)
-	del web_handler
+    print("=" * 50)
+    print("🏁 Running Finishing Field Team...")
+    print("=" * 50)
+    
+    print("\n➡️ Running Provider Module...")
+    provider.main()
+
+    print("\n➡️ Running WebHandler Module...")
+    webhandler.main()
+
+    print("\n✅ All modules executed successfully.")
